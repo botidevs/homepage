@@ -1,0 +1,124 @@
+:root {
+    --whiteish: #FEFEFC;
+    --accent: #ECBF9F;
+    --highlight: #D98040;
+    --blackish: #413E3D;
+}
+
+.light-theme {
+    --backgroundColour: var(--whiteish);
+    --fontColour: var(--black);
+}
+
+.dark-theme {
+    --backgroundColour: var(--blackish);
+    --fontColour: var(--white);
+}
+
+::selection { /*colouring for highlighted text on page*/
+  background: var(--accent); 
+}
+
+* {
+    margin: 0px;  /*gets rid of small margin at the top of page*/
+}
+
+
+ /***************  BODY and SECTIONS ***********************/
+
+body {
+	background-color: var(--backgroundColour);
+	color: var(--fontcolour);
+	font-family: 'Martel', serif;
+	font-size: 16px;
+	margin-top:0px;
+	margin-bottom:auto;
+}
+
+section {  /*needs to be tinkered with*/
+margin: 100px;
+margin-top: 10px;
+margin-bottom: 0px;
+}
+
+h1 {
+    font-family: 'Assistant', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+h2 {
+    display:inline;
+    font-size: 17px;
+}
+
+.flexbox {
+	display: flex;
+    flex-direction: row;
+	justify-content: center;
+    align-items: center;
+}
+
+
+.flexbox > div{
+	margin: 0px;
+}
+
+a:link, a:visited { /*meant only for in-text links*/
+text-decoration: none; 
+ }
+
+ ol.publist { /*publication list*/
+    padding: 0px;
+    list-style: none;
+}
+
+.publist > li {
+    padding-bottom: 15px;
+    }
+
+.publist  a {
+    }
+ /*************** NAVBAR ***********************/
+
+
+
+
+header li { /*remove bullets*/
+	list-style: none;
+}
+
+nav > ul { /*remove space from bullets*/
+	padding: 0px;
+}
+
+.topnav {
+	display: flex;
+    flex-direction: row;
+    font-family: 'Assistant', sans-serif;
+    font-weight: 300;
+    font-size:20px;
+    margin: 0px;
+    align-items: center;
+    justify-content: right;
+}
+
+.topnav a { 
+    color: black;
+    text-align: center;
+    display: block;
+    width: 180px;  /*should be edited maybe*/
+   }
+
+.topnav a.active {
+    background-color: var(--accent);
+  }
+
+.topnav a:hover {
+    background-color: var(--highlight);
+    color:white;
+  }
+
+
+
+  

@@ -1,0 +1,188 @@
+ /* BASICS */
+
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --light-orange: #ECBF9F;
+    --light-yellow: #fbfbed;
+    --dark-orange: #ECBF9F;
+    --blackish: #413E3D;
+    --mypink: #D98040;
+    --myorange: #ECBF9F;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--fontColor);
+    font-family: 'Martel', serif;
+    font-weight: 200;
+    font-size: 14px;
+    margin: 0px;
+}
+
+.light-theme {
+    --bg: var(--light-yellow);
+    --fontColor: var(--black);
+    --buttBg: var(--mypink);
+    --buttFontColor: var(--light-yellow);
+}
+
+.dark-theme {
+    --bg: var(--blackish);
+    --fontColor: var(--white);
+    --buttBg: var(--mypink);
+    --buttFontColor: var(--blackish);
+}
+
+
+* {
+    margin: 0px;
+    padding: 20px;
+}
+
+
+hr {
+  border: 0;
+  margin: 1.35em auto;
+  max-width: 100%;
+  background-position: 50%;
+  box-sizing: border-box;
+  padding: 0px;
+  color: #D98040;
+  width: 60%;
+  height: 100px;
+}
+
+.vertical-lines {
+ 
+
+  background-image: linear-gradient(
+    90deg,
+    currentColor,
+    currentColor 33.33%,
+    transparent 33.33%,
+    transparent 100%);
+  background-size: 3px 100%;
+
+    
+}
+
+.horizontal-lines {
+  height: 10px;
+  $color: green;
+  color: $color;
+  background-image: linear-gradient(
+    currentColor,
+    currentColor 33.33%,
+    transparent 33.33%,
+    transparent 100%);
+  background-size: 100% 3px;
+  width: 40px;
+}
+
+ /************ NAVBAR ***********************/
+
+#navbar {
+    display: flex;
+    width: 100%;
+    background: var(--bg);
+    overflow: hidden;
+    font-family: 'Assistant', sans-serif;
+    font-weight: 300;
+    font-size: large;
+    align-items: right;
+    justify-content: right;
+    margin: auto;
+    color: #2e482f;
+    position: sticky;
+    padding: 0px;
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color: #2e482f;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+   }
+
+#navbar a:hover {
+    background-color: var(--mypink);
+    color: var(--bg);
+  }
+
+#navbar a.active {
+    background-color: #ECBF9F;
+    color: var(--bg);
+  }
+
+ /* Hide the hamburger menu */
+#navbar .icon {
+    display: none;
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  #navbar a:not(:first-child) {display: none;}
+  #navbar a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  #navbar.responsive {position: relative;}
+  #navbar.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }ter
+  #navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+
+
+ /************************ FLEX CONTAINER ***********************/
+
+.flex-container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    gap: 0px 0px;
+  }
+
+
+.flex-container > div {
+    text-align: center;
+    border-radius: 5px;
+    margin: 0px;
+    padding: 0px;
+    width: 300px;
+  }
+
+
+
+
+
+
+
+
+
+
+
